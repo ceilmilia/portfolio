@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio — Alexis Waters" />
+    <title>Alexis Waters — Portfolio</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+            smooth: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+        </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Alexis Waters</h1>
+            <p>Welcome to my portfolio.</p>
+        </section>
+
+        <section id="projects" aria-label="Projects">
+            <h2>My Work</h2>
+            <div class="projectList">
+                <div class="projectCard">
+                    <img class="projectImage" src="images/brand.jpg" alt="Brand works project image">
+                    <h3>Brand works</h3>
+                    <p>Building brand through creative character design.</p>
+                    <a href="#">Explore</a>
+                </div>
+                 <div class="projectCard">
+                    <img class="projectImage" src="images/brand.jpg" alt="Brand works project image">
+                    <h3>Design Driven Retail Campaign</h3>
+                    <p>Creating an enganging shopping experience for families.</p>
+                    <a href="#">Explore</a>
+                </div>
+                 <div class="projectCard">
+                    <img class="projectImage" src="images/brand.jpg" alt="Brand works project image">
+                     <h3>Building a flexible Icon System for a Retailer</h3>
+                     <p>Updated iconography to be consistent across the business</p>
+                     <a href="#">Explore</a>
+                </div>
+                 <div class="projectCard">
+                    <img class="projectImage"src="images/brand.jpg" alt="Brand works project image">
+                    <h3>Project Title</h3>
+                    <p>rief description of the project.</p>
+                    <a href="#">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" aria-label="About">
+            <!-- About content -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Alexis Waters</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>B
